@@ -1,20 +1,20 @@
 <?php
 
-function verificarGrado ($nota){
+function verificarGrado (float $nota): string {
 
     if ($nota >= 60){
-        echo "El teu grau es Primera Divisió";
-    } else if ( $nota >= 45 && $nota <= 59 ){
-        echo "El teu grau es Segona Divisio";
-    } else if ( $nota >= 33 && $nota <= 44){
-        echo "El teu grau es Tercera Divisio";
+        return "El teu grau es Primera Divisió";
+    } else if ( $nota >= 45){
+        return "El teu grau es Segona Divisio";
+    } else if ( $nota >= 33){
+        return "El teu grau es Tercera Divisio";
     } else {
-        echo "Has suspes :(";
+        return "Has suspes :(";
     }
 }
 
 $nota = readline("Introdueix la nota de l'estudiant: ");
 
-verificarGrado($nota);
+echo verificarGrado($nota);
 
 ?>

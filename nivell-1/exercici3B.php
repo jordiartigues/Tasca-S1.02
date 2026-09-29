@@ -1,35 +1,32 @@
 <?php
 
-$numero1 = readline("introduce el primer numero: ");
-$numero2 = readline ("introduce el segundo numero: ");
+function operar(int $numero1, int $numero2, string $operacion)
+{
+    if ($operacion == "suma") {
+        return $numero1 + $numero2;
 
-/* comprobamos si ha introducido numeros */
+    } else if ($operacion == "resta") {
+        return $numero1 - $numero2;
 
+    } else if ($operacion == "multiplicacion") {
+        return $numero1 * $numero2;
 
-if (!is_numeric($numero1) || !is_numeric($numero2)){
-    echo "tienes que introducir numeros para que funcione";
-} else{
+    } else if ($operacion == "division") {
 
+        if ($numero2 == 0) {
+            return "No se puede dividir entre 0";
+        } else {
+            return $numero1 / $numero2;
+        }
 
-$operacion = readline("Introduce la operacion: ");
-
-
-/* para asegurarnos q los numeros son numeros, los convertimos poniendo (float) antes de readline */
-
-
-if ($operacion == "suma") {
-    echo $numero1 + $numero2;
-} else if ($operacion == "resta"){
-    echo $numero1 - $numero2;
-} else if ($operacion == "multiplicacion"){
-    echo $numero1 * $numero2;
-} else if ($operacion == "division"){
-    echo $numero1 / $numero2;
-} else {
-    echo "Operacion no valida";
-}
+    } else {
+        return "Operacion no valida";
+    }
 }
 
 
+/* Probamos la funncion */
+
+echo operar(20, 5, "resta");
 
 ?>
