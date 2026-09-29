@@ -1,6 +1,6 @@
 <?php
 
-function isBitten(){
+function isBitten(): bool {
 
     $numero = rand (0, 1);
 
@@ -14,7 +14,11 @@ function isBitten(){
 /* para que muestre en pantalla que tipo de dato es y que contiene usamos var dump*/
 
 
-    var_dump(isBitten());
+    if (isBitten()){
+        echo "Charlie te muerde el dedo";
+        } else {
+            echo "Esta vez no te ha mordido, prueba otra";
+        }
 
 
 ?>
