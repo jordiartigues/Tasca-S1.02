@@ -46,6 +46,7 @@ Tasca-S1.02/
     ├── exercici1.php
     ├── exercici2.php
     ├── exercici3.php
+    ├── exercici3B.php
     ├── exercici4.php
     ├── exercici5.php
     └── exercici6.php
